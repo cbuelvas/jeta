@@ -1,12 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('First Test'){
+    stage('Install dependencies'){
       steps {
-        sh 'ls -la' 
+        sh 'npm install' 
       }
     }
-    stage('Second Test') {
+    stage('Run the pet store endpoind test (full)') {
       steps { 
         sh 'ls' 
       }

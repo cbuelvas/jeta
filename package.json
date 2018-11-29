@@ -4,7 +4,8 @@
   "description": "Test Jenkins integration and API endpoint automated test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "petstore": "./node_modules/.bin/newman run postman/PetStoreC.json",
+    "pet:ideal": "./node_modules/.bin/newman run postman/PetStoreC.json --folder pet_ideal"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cbuelvas/jeta/issues"
   },
-  "homepage": "https://github.com/cbuelvas/jeta#readme"
+  "homepage": "https://github.com/cbuelvas/jeta#readme",
+  "dependencies": {
+    "newman": "^4.2.2"
+  }
 }
